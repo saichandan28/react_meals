@@ -7,7 +7,7 @@ const Meal = (props) => {
     const cartCtx = useContext(CartContext);
     const refQuantity = useRef(0);
 
-    const quantityValue = refQuantity.current.value;
+    // const quantityValue = refQuantity.current.value;
     
     const onClickHandler = (e) => {
         e.preventDefault();
@@ -17,7 +17,7 @@ const Meal = (props) => {
                     mealName: props.mealName, 
                     price: props.price, 
                     quantity: +quantity}); 
-                refQuantity.current.value=0;
+                // refQuantity.current.value='0';
             }
 
     }

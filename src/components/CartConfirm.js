@@ -5,6 +5,7 @@ import classes from './CartConfirm.module.css';
 import OrderConfirm from './OrderConfirm';
 
 const CartConfirm = (props) => {
+    const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState('');
     const [orderConfirmed, setOrderConfirmed] = useState(false);
     const [orderPlaced, setOrderPlaced] = useState(false);
@@ -34,6 +35,8 @@ const CartConfirm = (props) => {
 
         try {
 
+
+            setIsLoading(true);
             const postData = await (fetch ('https://react-http-134bb-default-rtdb.firebaseio.com/orders.json', {
                 method: 'POST',
                 body: JSON.stringify({
@@ -50,7 +53,9 @@ const CartConfirm = (props) => {
             }
             console.log(postData);
             if(postData.ok && postData.status === 200) {
+                setIsLoading(false);
                 setOrderPlaced(true);
+                cartCtx.clearCart();
             }
             else if(postData) {
                 throw new Error(postData.status);
@@ -62,11 +67,13 @@ const CartConfirm = (props) => {
             console.error(err);
             console.log(err.message);
             setError(err);
+        }finally{
+            setIsLoading(false);
         }
     }
     console.log(error);
 
-    if (error){
+    if (!orderPlaced && error ){
         return (
             <React.Fragment>
                 <span>Error</span><br></br>
@@ -74,41 +81,57 @@ const CartConfirm = (props) => {
             </React.Fragment>
         );
     }
-    else if(!orderConfirmed && cartCtx.items.length === 0){
+    else if (isLoading && !error){
         return (
             <React.Fragment>
-                <span>You don't have any items in your cart!</span>
-                <button onClick={onCloseHandler}>
-                                Close
-                </button>
+                <span>Loading....</span>
             </React.Fragment>
         );
     }
-    else if (orderConfirmed){
+    else if(!orderPlaced && !orderConfirmed && cartCtx.items.length === 0){
+        return (
+            <React.Fragment>
+                <div>
+                    <p>You don't have any items in your cart!</p>
+                </div>
+                <div>
+                    <button onClick={onCloseHandler}>
+                                    Close
+                    </button>
+                </div>
+            </React.Fragment>
+        );
+    }
+    else if (!orderPlaced && orderConfirmed){
         return (
             <React.Fragment>
                 <OrderConfirm confirmOrder={onOrderConfirmHandler} closeModal={props.closeModal}></OrderConfirm>             
             </React.Fragment>
         );
     } 
-    else if(orderPlaced) {
+    else if(orderPlaced && !error) {
         return (
             <React.Fragment>
                 <span>Your Order has been placed!</span>
                 <span>Thanks!!</span>
+                <button onClick={onCloseHandler}>
+                                Close
+                </button>
             </React.Fragment>
         )
     }
     else {
         return (
             <React.Fragment>            
-                <div>            
-                    <ul className={classes["unordered-list"]}>
+                <div className={classes["unordered-list"]}>            
+                    <ul>
                         {cartCtx.items.map((el) => {
                             return(
                             <li className={classes["list-item"]} key={el.mealId}>
                                 <div className={classes["meal-name"]}>
-                                    <span>{el.mealName}</span>
+                                    <span>{el.mealName}  </span>
+                                </div>
+                                <div>
                                     <span>₹{el.quantity*el.price}</span>
                                 </div>
                                 <div>

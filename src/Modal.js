@@ -1,6 +1,6 @@
 import classes from './Modal.module.css';
 import ReactDOM from 'react-dom';
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 
 // const modalContainer = ReactDOM.createPortal (Modal,document.getElementById('modal-container'));
 

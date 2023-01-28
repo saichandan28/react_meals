@@ -14,7 +14,7 @@ const CartButton = (props) => {
         return prev+curr.quantity;
     },0);
 
-    const { items } = cartCtx;
+    // const { items } = cartCtx;
     // console.log(cartCtx);
 
     // useEffect(() => {

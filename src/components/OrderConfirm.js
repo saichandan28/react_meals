@@ -20,7 +20,7 @@ const OrderConfirm = (props) => {
     const refPIN = useRef('');
 
     const [orderPlaced, setOrderPlaced] = useState(false);
-    const cartCtx = useContext(CartContext);
+    // const cartCtx = useContext(CartContext);
 
     const onCancelHandler = (e) => {
         e.preventDefault();
@@ -73,12 +73,12 @@ const OrderConfirm = (props) => {
                 <div>
                     <label htmlFor="name">Name</label>
                     <input id="name" ref={refName}></input>
-                    {!isValid.isNameValid && <p>Enter a valid Name</p>}
+                    {!isValid.isNameValid && <span>Enter a valid Name</span>}
                 </div>
                 <div>
                     <label htmlFor="street" >Street</label>
                     <input id="street" ref={refStreet}></input>
-                    {!isValid.isStreetValid && <p>Enter a valid Street</p>}
+                    {!isValid.isStreetValid && <span>Enter a valid Street</span>}
                 </div>
                 <div>
                     <label htmlFor="locality">Locality</label>
@@ -87,13 +87,13 @@ const OrderConfirm = (props) => {
                 <div>
                     <label htmlFor="city" >City</label>
                     <input id="city" ref={refCity}></input>
-                    {!isValid.isCityValid && <p>Enter a valid City</p>}
+                    {!isValid.isCityValid && <span>Enter a valid City</span>}
 
                 </div>
                 <div>
                     <label htmlFor="pin-code" >Pin Code</label>
                     <input id="pin-code" ref={refPIN}></input>
-                    {!isValid.isPinValid && <p>Enter a valid PIN</p>}
+                    {!isValid.isPinValid && <span>Enter a valid PIN</span>}
 
                 </div>
                 <div>

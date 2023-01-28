@@ -17,7 +17,25 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    /* overflow:scroll; */
     height:20rem;
+    padding: 3rem;
     width:50%;
     transform: translate(-50%, -50%);
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 1rem;
 }
+
+/* .modal-class {
+    background: rgb(256, 256, 256);
+    color:rgba( 0,0,0, .9);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height:40rem;
+    width:50%;
+    transform: translate(-50%, -50%);
+} */

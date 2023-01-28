@@ -3,16 +3,16 @@ import Header from './components/Header';
 import Body from './components/Body';
 import CartProvider from './CartProvider';
 
-import Counter from './components/Counter';
+// import Counter from './components/Counter';
 
 
 // const modalContainer = ReactDOM.createPortal (Modal,document.getElementById('modal-container'));
 
-const nullCart = {
+/* const nullCart = {
   items: [],
   amount: 0
 };
-
+ */
 function App() {
   
   

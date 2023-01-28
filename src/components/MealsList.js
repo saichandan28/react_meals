@@ -2,21 +2,6 @@ import Meal from './Meal';
 import classes from './MealsList.module.css';
 import React, {useEffect, useState} from 'react';
 
-const itemList = [
-    {
-        mealId : '01',
-        mealName : "Idli",
-        description : "Healthy Snack",
-        price : 20
-    },
-    {
-        mealId : '02',
-        mealName : "Dosa",
-        description : "Crunchy Snack",
-        price : 50
-    }
-]
-
 
 const MealsList = () => {
     const [error, setError] = useState('');
