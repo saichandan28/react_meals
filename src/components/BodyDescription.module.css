@@ -1,0 +1,9 @@
+.body-description {
+    width: 70%;
+    margin: 8rem auto 4rem;
+    border: 1px solid #FFF;
+    border-radius: 1rem;
+    padding: 2rem;
+    color:#FFF;
+    background: #555;
+}

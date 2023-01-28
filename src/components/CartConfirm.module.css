@@ -1,0 +1,20 @@
+.unordered-list {
+    list-style: none;
+    font-size: 1rem;
+    margin: 2rem;
+    padding: 0;
+}
+
+.list-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+meal-name {
+    width: 10rem;
+}
+
+button {
+    margin: 0 1rem 0 0;
+}
