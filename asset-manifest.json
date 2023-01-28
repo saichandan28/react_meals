@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/react_meals/static/css/main.d40232aa.chunk.css",
-    "main.js": "/react_meals/static/js/main.b1433e3d.chunk.js",
-    "main.js.map": "/react_meals/static/js/main.b1433e3d.chunk.js.map",
+    "main.css": "/react_meals/static/css/main.10bb5600.chunk.css",
+    "main.js": "/react_meals/static/js/main.59be99b9.chunk.js",
+    "main.js.map": "/react_meals/static/js/main.59be99b9.chunk.js.map",
     "runtime-main.js": "/react_meals/static/js/runtime-main.4dba583d.js",
     "runtime-main.js.map": "/react_meals/static/js/runtime-main.4dba583d.js.map",
-    "static/js/2.154f29ac.chunk.js": "/react_meals/static/js/2.154f29ac.chunk.js",
-    "static/js/2.154f29ac.chunk.js.map": "/react_meals/static/js/2.154f29ac.chunk.js.map",
+    "static/js/2.bb7ae7cc.chunk.js": "/react_meals/static/js/2.bb7ae7cc.chunk.js",
+    "static/js/2.bb7ae7cc.chunk.js.map": "/react_meals/static/js/2.bb7ae7cc.chunk.js.map",
     "index.html": "/react_meals/index.html",
-    "static/css/main.d40232aa.chunk.css.map": "/react_meals/static/css/main.d40232aa.chunk.css.map",
-    "static/js/2.154f29ac.chunk.js.LICENSE.txt": "/react_meals/static/js/2.154f29ac.chunk.js.LICENSE.txt"
+    "static/css/main.10bb5600.chunk.css.map": "/react_meals/static/css/main.10bb5600.chunk.css.map",
+    "static/js/2.bb7ae7cc.chunk.js.LICENSE.txt": "/react_meals/static/js/2.bb7ae7cc.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.4dba583d.js",
-    "static/js/2.154f29ac.chunk.js",
-    "static/css/main.d40232aa.chunk.css",
-    "static/js/main.b1433e3d.chunk.js"
+    "static/js/2.bb7ae7cc.chunk.js",
+    "static/css/main.10bb5600.chunk.css",
+    "static/js/main.59be99b9.chunk.js"
   ]
 }
